@@ -8,7 +8,9 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
+    "axios": "^1.13.6",
     "react-router-dom": "^7.13.2",
-    "tailwindcss": "^4.2.2"
+    "tailwindcss": "^4.2.2",
+    "zustand": "^5.0.12"
   }
 }

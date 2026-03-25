@@ -1,11 +1,17 @@
+import { useEffect, useState } from "react";
 import Users from "../components/Users";
+import axios from "axios";
 
 const UsersPage = ()=> {
-    const users = [
-            { id: 1, name: "Alice" },
-            { id: 2, name: "Bob" },
-            { id: 3, name: "Charlie" },
-        ]
+
+
+        const [users, setUsers]=useState([])
+
+            useEffect(()=>{
+        const fetchusers = async ()=>await axios.get("https://jsonplaceholder.typicode.com/users").then(res=>setUsers(res.data)).catch(err=>console.error(err))
+        fetchusers();
+
+    },[])
     return (
         <div>
             <h1 className="text-4xl font-bold mb-4">Users</h1>
